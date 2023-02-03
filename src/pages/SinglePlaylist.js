@@ -65,110 +65,110 @@ export default function SinglePlaylist() {
      <div  className='bg-black relative top-4 left-1 rounded-lg w-28 h-24 origin-center rotate-12'>
                 {mixTracks && <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTracks[0]}</h2>}
                  {mixTracks && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTracks[1]}</h2>}
-              <img src={playback} className='px-3 pt-4' />
+              <img alt='playback' src={playback} className='px-3 pt-4' />
         </div>
        {/* ---------2------ */}
         <div  className='bg-black relative rounded-lg w-28 h-24 top-3 '>
                 {mixTrack1 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack1[0]}</h2>}
                  {mixTrack1 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack1[1]}</h2>}
-               <img src={playback} className='px-6 pt-4' />
+               <img alt='playback' src={playback} className='px-6 pt-4' />
          </div>
         {/* ---------3------ */}
          <div  className='bg-black rounded-lg w-28 h-24 relative left-4 bottom-2 origin-top rotate-12'>
                  {mixTrack2 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack2[0]}</h2>}
                  {mixTrack2 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack2[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------4------ */}
          <div  className='bg-black rounded-lg w-32 h-28 origin-right -rotate-12'>
                  {mixTrack3 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack3[0]}</h2>}
                  {mixTrack3 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack3[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------5------ */}
          <div  className='bg-black rounded-lg w-24 h-24 origin-bottom rotate-6'>
                  {mixTrack4 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack4[0]}</h2>}
                  {mixTrack4 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack4[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------6------ */}
          <div  className='bg-black rounded-lg w-32 h-28 origin-bottom-right -rotate-6'>
                  {mixTrack5 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack5[0]}</h2>}
                  {mixTrack5 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack5[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------7------ */}
          <div  className='bg-black rounded-lg w-24 h-24 mt-10 origin-top-right rotate-12'>
                  {mixTrack6 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack6[0]}</h2>}
                  {mixTrack6 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack6[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------8------ */}
          <div  className='bg-black rounded-lg w-24 h-24 relative bottom-8 right-14 origin-top-right -rotate-45'>
                  {mixTrack7 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack7[0]}</h2>}
                  {mixTrack7 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack7[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------9------ */}
          <div  className='bg-black rounded-lg w-24 h-24 '>
                  {mixTrack8 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack8[0]}</h2>}
                  {mixTrack8 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack8[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------10------ */}
          <div  className='bg-black rounded-lg w-32 h-28 relative right-5 bottom-6 origin-center -rotate-12'>
                  {mixTrack9 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack9[0]}</h2>}
                  {mixTrack9 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack9[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------11------ */}
          <div  className='bg-black rounded-lg w-40 h-36 relative  '>
                  {mixTrack10 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack10[0]}</h2>}
                  {mixTrack10 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack10[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------12------hidden */}
          <div  className='bg-black rounded-lg w-32 h-28 origin-top-right  rotate-12'>
-                {mixTrack11 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack11[0]}</h2>}
+                {mixTrack11 &&  <h2 className='text-center truncate px-3 pt-2 text-sm'>{mixTrack11[0]}</h2>}
                  {mixTrack11 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack11[1]}</h2>}
                  
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------13------ */}
          <div  className='bg-black rounded-lg w-24 h-24 origin-top-right rotate-12'>
                  {mixTrack12 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack12[0]}</h2>}
                  {mixTrack12 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack12[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
         {/* ---------14------ */}
-         {/* <div  className='bg-black rounded-lg w-32 h-28 origin-top-right rotate-12'>
-         <h2 className='text-center truncate px-3 pt-3 text-sm'>hidden</h2> 
-                 {mixTracks[13].track.artists && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTracks[13].track.artists[13].name}</h2>}
-               <img src={playback} className='px-3 pt-4' />
-         </div> */}
+         <div  className='bg-black rounded-lg w-32 h-28 origin-top-right rotate-12'>
+          {mixTrack13 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack13[0]}</h2>}
+                 {mixTrack13 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack13[1]}</h2>}
+               <img alt='playback' src={playback} className='px-3 pt-4' />
+         </div>
          {/* ---------15------- */}
          <div  className='bg-black rounded-lg w-28 h-24 origin-center rotate-90'>
                  {mixTrack14 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack14[0]}</h2>}
                  {mixTrack14 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack14[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
          {/* ---------16------- hidden */}
-         {/* <div  className='bg-black rounded-lg w-28 h-24 origin-center rotate-90'>
-         <h2 className='text-center truncate px-3 pt-3 text-sm'>hidden</h2> 
-                 {mixTracks[15].track.artists && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTracks[15].track.artists[15].name}</h2>}
-               <img src={playback} className='px-3 pt-4' />
-         </div> */}
+         <div  className='bg-black rounded-lg w-28 h-24 origin-center rotate-90'>
+          {mixTrack15 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack15[0]}</h2>}
+                 {mixTrack15 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack15[1]}</h2>}
+               <img alt='playback' src={playback} className='px-3 pt-4' />
+         </div>
          {/* ---------17------- */}
          <div  className='bg-black rounded-lg w-28 h-24 origin-center rotate-12'>
                  {mixTrack16 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack16[0]}</h2>}
                  {mixTrack16 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack16[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>
          {/* ---------18------- */}
          <div  className='bg-black rounded-lg w-28 h-24 origin-center '>
                  {mixTrack17 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack17[0]}</h2>}
                  {mixTrack17 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack17[1]}</h2>}
-               <img src={playback} className='px-3 pt-4' />
+               <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>    
     </div>
         <div>
