@@ -98,10 +98,10 @@ export default function Login() {
                   <img src={track.album.images[2].url} alt={track.name} />
                 </div>
               )}
-              <div className='font-basic'>{track.name}</div>
+              <h2 className='font-basic truncate'>{track.name}</h2>
               <div>
               {track.artists.map((artist, i) => (
-                    <span className='text-xs font-display' key={i}>
+                    <span className='text-xs font-display truncate' key={i}>
                       {artist.name}{i !== track.artists.length - 1 && ', '}
                     </span>
                   ))}
@@ -109,7 +109,10 @@ export default function Login() {
                 </div>
                   ))}
                </div>
-            ):  <div>No tracks available</div>}
+            ):  <div>
+              <h5>No tracks available </h5>
+              <h6>Kindly refresh the page</h6>
+              </div>}
             </section>
             
            <div className='text-center text-2xl underline hover:text-pry my-5'> <Link to='/playlists'>View all Playlist</Link></div>

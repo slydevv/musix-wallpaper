@@ -4,7 +4,7 @@ import Playlists from './pages/Playlists';
 import Login from './pages/Login';
 import { useEffect, useState } from 'react';
 import SinglePlaylist from './pages/SinglePlaylist';
-import Navbar from './components/search/Navbar';
+// import Navbar from './components/search/Navbar';
 import Wallpaper from './pages/Wallpaper';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="bg-black  text-white">
-        {/* <Navbar /> */} 
+        {/* <Navbar />  */}
         <Routes>
           <Route path='/playlists' element={<Playlists />} />
           <Route path='/playlists/:id' element={<SinglePlaylist />} />

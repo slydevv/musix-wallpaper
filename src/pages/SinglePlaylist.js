@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { getPlaylistById } from '../spotify';
-import playback from '../assets/playback.svg'
+import playback from '../assets/playback.svg';
+import { exportImage } from '../components/exportImage';
 
 export default function SinglePlaylist() {
     const {id} = useParams();
+    const exportRef = useRef()
     const [mixTracks, setMixtracks] = useState([])
     const [mixTrack1, setMixtrack1] = useState([])
     const [mixTrack2, setMixtrack2] = useState([])
@@ -53,12 +55,11 @@ export default function SinglePlaylist() {
         }
             
         fetchData();
-    }, []) 
-   
+    }, [])    
     
   return (  
-     
-   <div className='bg-hero bg-cover py-10 grid grid-cols-3 gap-6'> 
+     <div>
+   <div ref={exportRef} className='wallpaper bg-hero bg-cover py-10 grid grid-cols-3 gap-6'> 
   
      {/* ---------1------ */}
      <div  className='bg-black relative top-4 left-1 rounded-lg w-28 h-24 origin-center rotate-12'>
@@ -168,21 +169,11 @@ export default function SinglePlaylist() {
                  {mixTrack17 &&  <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTrack17[0]}</h2>}
                  {mixTrack17 && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTrack17[1]}</h2>}
                <img src={playback} className='px-3 pt-4' />
-         </div>
-
-    
+         </div>    
+    </div>
+        <div>
+        <button className='w-30 bg-green-400 p-3' onClick={() => exportImage(exportRef.current, "test")}>Download Wallpaper</button>
+        </div>
     </div>
   )
 }
-
-
-
-// {mixTracks && mixTracks.map(tape => (
-//   <div> 
-//     <div key={tape.track.id} className='bg-black rounded-lg w-36 h-32'>
-//         <h2 className='text-center truncate px-3 pt-3'>{tape.track.name}</h2>  
-//         {tape.track.artists && <h2 className='text-sm font-display text-gray-500 text-center'>{tape.track.artists[0].name}</h2>}
-//         <img src={playback} className='px-3 pt-4' />
-//     </div>
-//   </div> 
-//  ))}  
