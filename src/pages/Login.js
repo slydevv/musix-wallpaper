@@ -11,7 +11,7 @@ export default function Login() {
   const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
-    : 'https://musix-wallpaper.onrender.com/login';
+    : 'https://musix-wallpaper-api.onrender.com/login';
 
   
 
