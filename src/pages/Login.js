@@ -78,7 +78,7 @@ export default function Login() {
                     <img src={profile.images[0].url} className='img_header' alt="Avatar"/>
                   </div>
                 )}
-                <div className='flex space-x-4'>
+                <div className='flex justify-center space-x-4'>
                  <div> Followers: {profile.followers.total && <h4>{profile.followers.total}</h4>}</div>
                 <div> {profile.product && <span>{profile.product}</span>} User</div>
                </div>
@@ -89,21 +89,21 @@ export default function Login() {
           <section className='my-10 '>
             <h3 className='text-center text-3xl text-pry py-6 underline underline-offset-2'>Top Listens</h3>
             {topTracks && topTracks.length ? (
-              <div className='grid grid-cols-3'>
+              <div className='grid grid-cols-3 gap-3 '>
                 {topTracks && topTracks.slice(0, 6).map((track, i) => (
-                <div key={i}>
+                <div key={i} className='my-5 '>
                   
                   {track.album.images.length && track.album.images[2] && (
-                <div className="track__item__img">
-                  <img src={track.album.images[2].url} alt={track.name} />
+                <div className="flex justify-center ">
+                  <img className='w-40' src={track.album.images[2].url} alt={track.name} />
                 </div>
               )}
-              <h2 className='font-basic truncate'>{track.name}</h2>
+              <h2 className='font-basic text-base font-bold text-center truncate'>{track.name}</h2>
               <div>
               {track.artists.map((artist, i) => (
-                    <span className='text-xs font-display truncate' key={i}>
+                    <h2 className='text-xs text-center font-display truncate' key={i}>
                       {artist.name}{i !== track.artists.length - 1 && ', '}
-                    </span>
+                    </h2>
                   ))}
               </div>
                 </div>

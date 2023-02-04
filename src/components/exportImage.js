@@ -1,6 +1,11 @@
 import html2canvas from "html2canvas";
 
+
+
+
+
 export const exportImage = async (element, imageName) => {
+  
     const canvas = await html2canvas(element)
     const image = canvas.toDataURL("image/png", 1.0); 
     downloadImage(image, imageName);
@@ -18,5 +23,6 @@ tempLink.click();
 document.body.removeChild(tempLink);
 
 tempLink.remove()
+document.location.href = '/payment'
 
 }

@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import SinglePlaylist from './pages/SinglePlaylist';
 // import Navbar from './components/search/Navbar';
 import Wallpaper from './pages/Wallpaper';
+import CustomWallpaper from './pages/CustomWallpaper';
+import Payment from './pages/Payment';
 
 function App() {
   const [token, setToken] = useState(null)
@@ -19,6 +21,8 @@ function App() {
         <Routes>
           <Route path='/playlists' element={<Playlists />} />
           <Route path='/playlists/:id' element={<SinglePlaylist />} />
+          <Route path='/customwallpaper' element={<CustomWallpaper />} />
+          <Route path='/payment' element={<Payment />} />
           {/* <Route path='/wallpaper' element={<Wallpaper />} /> */}
           <Route path='/' element={<Login />} />
         </Routes>
