@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom'
 import { getPlaylistById } from '../spotify';
 import playback from '../assets/playback.svg';
 import { exportImage } from '../components/exportImage';
+import phone from '../assets/phone.jpg'
 
 export default function SinglePlaylist() {
     const {id} = useParams();
     const exportRef = useRef()
+    const [pic, setPic] = useState('')
     const [mixTracks, setMixtracks] = useState([])
     const [mixTrack1, setMixtrack1] = useState([])
     const [mixTrack2, setMixtrack2] = useState([])
@@ -19,7 +21,7 @@ export default function SinglePlaylist() {
     const [mixTrack9, setMixtrack9] = useState([])
     const [mixTrack10, setMixtrack10] = useState([])
     const [mixTrack11, setMixtrack11] = useState([])
-    const [mixTrack12, setMixtrack12] = useState([])
+    const [mixTrack12, setMixtrack12] = useState([]) 
     const [mixTrack13, setMixtrack13] = useState([])
     const [mixTrack14, setMixtrack14] = useState([])
     const [mixTrack15, setMixtrack15] = useState([])
@@ -55,17 +57,24 @@ export default function SinglePlaylist() {
         }
             
         fetchData();
-    }, [])    
+    }, []) 
+    const handleChange = (e) => {
+      console.log(e.target.files);
+      setPic(URL.createObjectURL(e.target.files[0]));
+      console.log(pic)
+  }   
     
   return (  
      <div>
-   <div ref={exportRef} className='wallpaper bg-hero bg-cover py-10 grid grid-cols-3 gap-6'> 
+      {/* {pic && <img src={pic}/>} */}
+   <div ref={exportRef} style={!pic ? {backgroundImage:`url(${phone})`} :{backgroundImage:`url(${pic})`}} className={'wallpaper bg-hero bg-cover py-10 grid grid-cols-3 gap-6'
+}> 
   
      {/* ---------1------ */}
      <div  className='bg-black relative top-4 left-1 rounded-lg w-28 h-24 origin-center rotate-12'>
-                {mixTracks && <h2 className='text-center truncate px-3 pt-3 text-sm'>{mixTracks[0]}</h2>}
-                 {mixTracks && <h2 className='text-sm font-display text-gray-500 text-center'>{mixTracks[1]}</h2>}
-              <img alt='playback' src={playback} className='px-3 pt-4' />
+                {mixTracks && <h2 className='text-center truncate px-3 pt-1 text-sm'>{mixTracks[0]}</h2>}
+                 {mixTracks && <h2 className='text-xs font-display text-gray-500 text-center'>{mixTracks[1]}</h2>}
+              <img alt='playback' src={playback} className='px-3 pt-2' />
         </div>
        {/* ---------2------ */}
         <div  className='bg-black relative rounded-lg w-28 h-24 top-3 '>
@@ -171,8 +180,9 @@ export default function SinglePlaylist() {
                <img alt='playback' src={playback} className='px-3 pt-4' />
          </div>    
     </div>
+        <div> <input type='file' onChange={handleChange} /></div>
         <div>
-        <button className='w-30 bg-green-400 p-3' onClick={() => exportImage(exportRef.current, "test")}>Download Wallpaper</button>
+        <button className='w-30 bg-green-400 p-3' onClick={() => exportImage(exportRef.current, "wallpaper")}>Download Wallpaper</button>
         </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
-import { accessToken, logout, getUserProfile, getTopTracks } from '../spotify';
+import { accessToken, logout, getUserProfile, getAllPlaylist, getTopTracks } from '../spotify';
 import { Link } from 'react-router-dom';
 
 
@@ -8,6 +8,7 @@ export default function Login() {
   const [token, setToken] = useState(null)
   const [profile, setProfile] = useState('')
   const [topTracks, setTopTracks] = useState([])
+  const [playlists, setPlaylists] = useState([])
   const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
@@ -37,10 +38,22 @@ export default function Login() {
         }
       
       }
+
+      const fetchPlaylist = async () => {
+        try{
+          const {data} = await getAllPlaylist();
+          const list = data.items
+          const shuffled =  list.sort(() => 0.5 - Math.random());
+          const topThree =  shuffled.slice(0, 3); 
+          setPlaylists(topThree)
+        }catch (error){
+          console.log(error)
+        }
+      }
       
       fetchTopTracks();
       fetchData()
-     
+      fetchPlaylist()
     }, [])
     
   return (
@@ -105,6 +118,31 @@ export default function Login() {
                       {artist.name}{i !== track.artists.length - 1 && ', '}
                     </h2>
                   ))}
+              </div>
+                </div>
+                  ))}
+               </div>
+            ):  <div>
+              <h5>No tracks available </h5>
+              <h6>Kindly refresh the page</h6>
+              </div>}
+            </section>
+{/* -------------display playlist------------- */}
+          <section className='my-10 '>
+            <h3 className='text-center text-3xl text-pry py-6 underline underline-offset-2'>Playlist</h3>
+            {playlists && playlists.length ? (
+              <div className='grid grid-cols-3 gap-3 '>
+                {playlists && playlists.map((playlist, i) => (
+                <div key={playlist.id} className='my-5 '>
+                  
+                  {playlist.images.length && playlist.images[2] && (
+                <div className="flex justify-center ">
+                  <img className='w-40' src={playlist.images[2].url} alt={playlist.name} />
+                </div>
+              )}
+              <h2 className='font-basic text-base font-bold text-center truncate'>{playlist.name}</h2>
+              <div>
+             
               </div>
                 </div>
                   ))}
