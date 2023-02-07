@@ -65,9 +65,10 @@ export default function SinglePlaylist() {
   }   
     
   return (  
-     <div>
-      {/* {pic && <img src={pic}/>} */}
-   <div ref={exportRef} style={!pic ? {backgroundImage:`url(${phone})`} :{backgroundImage:`url(${pic})`}} className={'wallpaper bg-hero bg-cover py-10 grid grid-cols-3 gap-6'
+     <div className=''>
+   <div ref={exportRef} 
+   style={!pic ? {backgroundImage:`url(${phone})`, backgroundSize:'cover'} :{backgroundImage:`url(${pic})`}} 
+   className={'wallpaper lg:w-[390px] lg:my-10 mx-auto py-10 grid grid-cols-3 gap-6'
 }> 
   
      {/* ---------1------ */}

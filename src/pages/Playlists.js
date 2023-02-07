@@ -30,21 +30,21 @@ export default function Playlists() {
     <div className='mx-4 px-2'>
       
       <h2 className='text-center text-2xl underline'>Choose a Playlist</h2>
-      <p className='font-display'>Click on a playlist and we would select random songs from that playlist to create your wallpaper</p>
+      <p className='font-display text-center'>Click on a playlist and we would select random songs from that playlist to create your wallpaper</p>
      
        {!token ? <Link to='/login' >login here</Link>: 
        <div>
-          {playlists.length ? <div  className='grid grid-cols-3 gap-3 my-5 '>{ playlists && playlists.map( playlist => (
+          {playlists.length ? <div  className='grid grid-cols-3 gap-3 my-5'>{ playlists && playlists.map( playlist => (
            
-            <div className='bg-gray-700' key={playlist.id}>
+            <div className='bg-gray-700 lg:w-72 hover:bg-gray-500  lg:mx-auto ' key={playlist.id}>
               <div onClick={() => navigate(`/playlists/${playlist.id}`)}>
-                <h2  className='text-center truncate '>{playlist.name}</h2>
+                <h2  className='text-center font-display text-xl p-1 truncate '>{playlist.name}</h2>
                 {playlist.images.length && playlist.images[0] && (
-                      <div className="grid__item__img">
-                        <img src={playlist.images[0].url} alt={playlist.name} />
+                      <div className=" lg:flex lg:justify-center">
+                        <img className='shadow-2xl rounded-lg lg:h-56 lg:w-56' src={playlist.images[0].url} alt={playlist.name} />
                       </div>
                     )}
-                <h6 className='text-center text-xs'>Tracks:{playlist.tracks.total}</h6>
+                <h6 className='text-center text-xs p-1 font-basic'>Tracks:{playlist.tracks.total}</h6>
               </div>
             
             </div>
