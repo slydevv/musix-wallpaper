@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { accessToken, logout, getAllPlaylist } from '../spotify';
+import { accessToken, getAllPlaylist } from '../spotify';
 
 
 export default function Playlists() {
@@ -23,7 +23,7 @@ export default function Playlists() {
       }
     
     fetchPlaylist()
-  }, [])
+  }, [playlists])
  
   return (
     
@@ -34,9 +34,9 @@ export default function Playlists() {
      
        {!token ? <Link to='/login' >login here</Link>: 
        <div>
-          {playlists.length ? <div  className='grid grid-cols-3 gap-3 my-5'>{ playlists && playlists.map( playlist => (
+          {playlists.length ? <div  className=' py-8 grid grid-cols-3 gap-3 my-5'>{ playlists && playlists.map( playlist => (
            
-            <div className='bg-gray-700 lg:w-72 hover:bg-gray-500  lg:mx-auto ' key={playlist.id}>
+            <div className='bg-gray-700 rounded-md  my-4 lg:w-72 hover:bg-gray-500  lg:mx-auto ' key={playlist.id}>
               <div onClick={() => navigate(`/playlists/${playlist.id}`)}>
                 <h2  className='text-center font-display text-xl p-1 truncate '>{playlist.name}</h2>
                 {playlist.images.length && playlist.images[0] && (
@@ -48,7 +48,7 @@ export default function Playlists() {
               </div>
             
             </div>
-           
+            
           ) 
           
           )}</div>:<div >

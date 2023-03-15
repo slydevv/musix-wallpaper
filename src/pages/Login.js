@@ -65,12 +65,15 @@ export default function Login() {
           <div className='lg:px-10'> 
             <h2 className='text-4xl lg:text-7xl text-left font-extrabold font-display leading-[55px]'>
               Create unique Music wallpaper based on your Favorite Playlist</h2>
-              <div className='lg:my-12'><a className='bg-pry py-3 px-6 rounded-lg text-lg font-bold' href={LOGIN_URI}>Login with spotify</a></div>
+              <div className='lg:my-12 hidden md:block lg:block'><a className='bg-pry py-3 px-6 rounded-lg text-lg font-bold ' href={LOGIN_URI}>Login with spotify</a></div>
           </div>
           <div className='drop-shadow-md hidden lg:block lg:px-16'>
             <img  src={newCover}/>
           </div>
         </div>
+        {/* mobile btn */}
+        <div className='lg:my-12 md:hidden lg:hidden flex justify-center'><a className='bg-pry py-3 px-6 rounded-lg text-lg font-bold' href={LOGIN_URI}>Login with spotify</a></div>
+
         <div className='my-16 text-center'>
           
             <section className='bg-gray-800 my-10 font-basic lg:m-[25px]'>
